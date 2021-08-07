@@ -14,7 +14,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL: http://bigota.d.miui.com/20.4.27/miui_MIMIX3_20.4.27_8f7879221b_10.0.zip
+  ROM_URL: http://bigota.d.miui.com/V12.5.1.0.QEACNXM/dipper_images_V12.5.1.0.QEACNXM_20210602.0000.00_10.0_cn_2e31c53530.tgz
   ROM_NAME: MIUI
   TZ: Asia/Shanghai
 
@@ -47,7 +47,7 @@ jobs:
               sudo bash setup-xiaoxin.sh
        
        - name: Download Stock Rom & Generate GSI
-         run: sudo ./ErfanGSIs/url2GSI.sh -c -b $ROM_URL $ROM_NAME
+         run: sudo ./ErfanGSIs/url2GSI.sh -c -b $ROM_URL $ROM_NAME -ab
        
        - name: Zip GSI  
          run: |
